@@ -61,6 +61,8 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
               RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18)),
                 onPressed: () => {
                   setState(() {
                     sumar();
@@ -89,6 +91,8 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
               RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18)),
                 onPressed: () {
                   setState(() {
                     resultado = 0;
@@ -152,6 +156,6 @@ class _HomePageState extends State<HomePage> {
     } else {
       resultado = int.parse(_aController.text) + int.parse(_bController.text);
     }
-    FocusScope.of(context).unfocus();
+    FocusScope.of(context).unfocus(); // Ocultar teclado
   }
 }
